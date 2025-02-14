@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata", {
+
+            // Configurations facultatives...
+
+            }).then((response) => {
+
+            // affiche le corps de la réponse JSON
+
+            console.log(response.json()) // {  "origin": "<VOTRE_ADRESSE_IP>" }
+
+            })
+
+        
+        //categorie
+        //https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+        //area
+        //https://www.themealdb.com/api/json/v1/1/list.php?a=list
+        //ingredients
+        //https://www.themealdb.com/api/json/v1/1/categories.php
+    </script>
+</body>
+</html>
