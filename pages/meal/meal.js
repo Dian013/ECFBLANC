@@ -1,4 +1,7 @@
-  
+
+const ID = localStorage.getItem('mealID');
+meal(ID)
+
 function meal(ID){
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${ID}`)
         .then((res) => res.json())
