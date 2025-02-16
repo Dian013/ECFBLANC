@@ -4,16 +4,15 @@
     box-sizing: border-box;
 }
 
-nav {
+#menu_nav {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(211, 72, 3);
     padding: 20px 0; 
-    margin: 10px; 
 }
 
-ul {
+#menu_ul {
     width: auto; 
     display: flex;
     align-items: center;
@@ -21,17 +20,17 @@ ul {
     gap: 20px; 
 }
 
-ul li {
+#menu_ul li {
     list-style: none;
     padding: 0 15px; 
 }
 
-li a{
+#menu_ul li a{
     color: white;
     text-decoration: none;
 }
 
-li a:hover{
+#menu_ul li a:hover{
     color: rgb(0, 0, 0);
     text-decoration: underline;
 }

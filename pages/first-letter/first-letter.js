@@ -13,9 +13,9 @@ fetch('../menu/menu.html')
 
 
 function first_letter(letter){ 
+    
     const div = document.querySelector('#first-letter')
-
-    div.innerHTML = "";
+    div.innerHTML = ""; //Reinitialiser div à chaque nouvelle recherche
 
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`)
         .then((res) => res.json())

@@ -31,6 +31,10 @@ button.addEventListener("click",function(){
 });
 
 function search(word){
+
+    const div = document.querySelector('#search');
+    div.innerHTML = "";  //Reinitialiser div à chaque nouvelle recherche
+
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${word}`)
         .then((res) => res.json())
         .then((data) => {

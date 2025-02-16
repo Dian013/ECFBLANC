@@ -18,9 +18,15 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
         const div = document.querySelector('#categorie')
 
         for (let i = 0; i < categories.length; i++) {
-            let h2 = document.createElement("h2");
-            h2.textContent = categories[i].strCategory;
-            div.appendChild(h2);
+            let link_categorie = document.createElement("button");
+            link_categorie.textContent = categories[i].strCategory;
+
+            link_categorie.addEventListener('click', function(){
+                localStorage.setItem('mealcategorie', categories[i].strCategory); 
+                window.location.href = "../categorie/categorie.html"
+            })
+
+            div.appendChild(link_categorie);
         }
     });
 

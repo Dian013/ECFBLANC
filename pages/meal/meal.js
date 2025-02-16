@@ -1,5 +1,17 @@
+fetch('../menu/menu.html')
+    .then((res) => res.text())  //On change .json en .text car pas possible de récuperer le html en json
+    .then((html) => {
+        
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html'); // Convertie le text html en dom
 
-const ID = localStorage.getItem('mealID');
+        console.log(doc)
+        const menu = doc.querySelector('nav')
+        const header = document.querySelector('header')
+        header.append(menu)
+    });
+
+const ID = localStorage.getItem('mealID');  //Récuperer l'id dans l'espace local placé au moment du clicj sur le lien
 meal(ID)
 
 function meal(ID){
