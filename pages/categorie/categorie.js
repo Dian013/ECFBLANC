@@ -1,6 +1,5 @@
-  
-const categorie = "Beef"
-    
+
+const categorie = "Beef"  
 fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categorie}`)
     .then((res) => res.json())
     .then((data) => {
@@ -10,7 +9,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categorie}`)
         for (let i = 0; i < meals.length; i++) {
             let h2 = document.createElement("h2");
             let img = document.createElement("img")
-            let meal_link = document.createElement("a")
+            let meal_link = document.createElement("button")
 
             const id = meals[i].idMeal
 
