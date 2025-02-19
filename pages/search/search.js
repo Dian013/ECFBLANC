@@ -13,21 +13,38 @@ fetch('../menu/menu.html')
 
 
 //En appuyant sur entrée, ça cherche ce qu'il y avait dans l'input
-const input = document.querySelector('input')
+let input = document.querySelector('input')
 input.addEventListener("keypress", function(event){
     if (event.key === "Enter") {
         let input = document.querySelector('input');
-        const word = input.value
-        search(word)
+        const inputValue = input.value.trim()  //trim permet d'enlever les espaces blanc autour du string
+    
+        if (inputValue){
+            const word = inputValue
+            search(word)
+        }
+    
+        else{
+            alert("Champ de text vide, c'est compliqué de trouver un plat sans le nom :/ (vous avez appuyé sur entrée)")
+        }  
     }
 });
 
 //En appuyant sur le bouton, ça cherche ce qu'il y avait dans l'input
 const button = document.querySelector('button') 
 button.addEventListener("click",function(){
+
     let input = document.querySelector('input');
-    const word = input.value
-    search(word)
+    const inputValue = input.value.trim()  //trim permet d'enlever les espaces blanc autour du string
+
+    if (inputValue){
+        const word = inputValue
+        search(word)
+    }
+
+    else{
+        alert("Champ de text vide, c'est compliqué de trouver un plat sans le nom :/ (vous avez appuyé sur le bouton)")
+    }   
 });
 
 function search(word){
@@ -42,8 +59,9 @@ function search(word){
             const meals = data.meals;
 
             for (let i = 0; i < meals.length; i++){
-                const div = document.querySelector('#search');
+                const div_main = document.querySelector('#search');
         
+                let div = document.createElement("div")
                 let img = document.createElement("img");
                 let h2 = document.createElement("h2");
                 let p_area_category = document.createElement("p");
@@ -57,7 +75,7 @@ function search(word){
                                                 Category : ${meals[i].strCategory}`;
                 
 
-                meal_link.textContent = "lien"
+                meal_link.textContent = "voir plus"
                 meal_link.addEventListener('click', function(){
                     localStorage.setItem('mealID', id); 
                     window.location.href = "../meal/meal.html"
@@ -68,22 +86,8 @@ function search(word){
                 div.appendChild(h2);
                 div.appendChild(p_area_category);
                 div.appendChild(meal_link)
-                
-                for (let j = 0; j < 15; j++){
-                    let p_ingredient = document.createElement("p");
-                    p_ingredient.textContent = meals[i][`strIngredient${j}`];
-                    if (p_ingredient.textContent !== ""){
-                        div.appendChild(p_ingredient);
-                    }
-                }
-        
-                for (let j = 0; j < 15; j++){
-                    let p_measure = document.createElement("p");
-                    p_measure.textContent = meals[i][`strMeasure${j}`]
-                    if (p_measure.textContent !== ""){
-                        div.appendChild(p_measure);
-                    }
-                }
+
+                div_main.append(div)
             }
         }
     )

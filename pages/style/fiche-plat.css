@@ -1,8 +1,19 @@
 .fiche-plat{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fiche-plat div{
+    width: 300px;
+    background-color: rgb(255, 213, 213);
+    padding: 15px;
+
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    
 }
 
 .fiche-plat img{
@@ -10,3 +21,6 @@
     height: auto;
     object-fit: cover;
 }
+
+/* J'ai essayé de faire un css pour toute les fiches mais je m'en sort pas j'ai fini par faire 1 css par page */
+/*J'ai compris à la fin comment ça marche mais j'ai pas le temps de tout refaire*/

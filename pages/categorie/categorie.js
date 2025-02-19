@@ -19,9 +19,12 @@ function categorie_function(categorie){
         .then((res) => res.json())
         .then((data) => {
             const meals = data.meals;
-            const div = document.querySelector('#categorie')
+
+            const div_main = document.querySelector('#categorie');
 
             for (let i = 0; i < meals.length; i++) {
+                
+                let div = document.createElement("div")
                 let h2 = document.createElement("h2");
                 let img = document.createElement("img")
                 let meal_link = document.createElement("button")
@@ -31,7 +34,7 @@ function categorie_function(categorie){
                 img.src = meals[i].strMealThumb
                 h2.textContent = meals[i].strMeal;
 
-                meal_link.textContent = "lien"
+                meal_link.textContent = "voir plus"
                 meal_link.addEventListener('click', function(){
                     localStorage.setItem('mealID', id); 
                     window.location.href = "../meal/meal.html"
@@ -40,7 +43,11 @@ function categorie_function(categorie){
                 div.appendChild(img);
                 div.appendChild(h2);
                 div.appendChild(meal_link)
+
+                div_main.append(div)
             }
+
+            
         }
     );
 }

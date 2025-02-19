@@ -1,0 +1,55 @@
+#alpha{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#alpha a{
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+
+#alpha a:hover{
+    text-decoration: none;
+    color: black;
+    background-color: pink;
+    margin: 5px;
+}
+
+
+
+
+#first-letter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+#first-letter div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#first-letter div img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+#first-letter div h2{
+    position: absolute;
+    width: 300px;
+    color: black;
+    background-color: rgb(255, 213, 213);
+    text-align: center;
+    border: 1px solid black;
+}
+
+#first-letter div button{
+    width: 300px;
+}

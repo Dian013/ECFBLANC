@@ -1,0 +1,34 @@
+
+#categorie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+#categorie div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#categorie div img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+#categorie div h2{
+    position: absolute;
+    width: 300px;
+    color: black;
+    background-color: rgb(255, 213, 213);
+    text-align: center;
+    border: 1px solid black;
+}
+
+#categorie div button{
+    width: 300px;
+}

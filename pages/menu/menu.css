@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(255, 249, 225);
+    box-shadow: 0px 0px 20px rgb(207, 207, 207);
 }
 
 #menu_ul {
@@ -26,7 +27,8 @@
 #menu_ul li a{
     padding: 20px 20px;
     color: black;
-    text-decoration: none;    
+    text-decoration: none;   
+    text-transform: uppercase; 
 
     &:hover{   /*SCSS permet de mettre le hover ici*/
         background-color: orange;
@@ -35,4 +37,33 @@
 
 #menu_ul li a:hover{
     color: white
+}
+
+@media (max-width: 560px) {
+    #menu_ul {
+        width: 100%;   
+        flex-flow: column;
+        background-color: rgb(255, 235, 157); /*couleur un peu différente pour la version mobile pour mieux visualiser le changement*/
+    }
+
+    #menu_ul li {
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+
+        &:hover{   /*SCSS permet de mettre le hover ici*/
+            width: 100%;
+        }
+    }
+    
+    #menu_ul li a{
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;  
+    
+        &:hover{   /*SCSS permet de mettre le hover ici*/
+            background-color: orange;
+            width: 100%;
+        }
+    }
 }

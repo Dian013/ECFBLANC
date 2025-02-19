@@ -23,9 +23,12 @@ function first_letter(letter){
             
             const meals = data.meals;
 
+            const div_main = document.querySelector('#first-letter');
+
+
             for (let i = 0; i < meals.length; i++){
-                const div = document.querySelector('#first-letter');
-        
+
+                let div = document.createElement("div")
                 let img = document.createElement("img");
                 let h2 = document.createElement("h2");
                 let p_area_category = document.createElement("p");
@@ -39,7 +42,7 @@ function first_letter(letter){
                                                 Category : ${meals[i].strCategory}`;
                 
 
-                meal_link.textContent = "lien"
+                meal_link.textContent = "voir plus"
 
                 meal_link.addEventListener('click', function(){
                     localStorage.setItem('mealID', id); 
@@ -49,23 +52,9 @@ function first_letter(letter){
                 div.appendChild(img);
                 div.appendChild(h2);
                 div.appendChild(p_area_category);
-                div.appendChild(meal_link)
-                
-                for (let j = 0; j < 15; j++){
-                    let p_ingredient = document.createElement("p");
-                    p_ingredient.textContent = meals[i][`strIngredient${j}`];
-                    if (p_ingredient.textContent !== ""){
-                        div.appendChild(p_ingredient);
-                    }
-                }
-        
-                for (let j = 0; j < 15; j++){
-                    let p_measure = document.createElement("p");
-                    p_measure.textContent = meals[i][`strMeasure${j}`]
-                    if (p_measure.textContent !== ""){
-                        div.appendChild(p_measure);
-                    }
-                }
+                div.appendChild(meal_link)               
+
+                div_main.append(div)
             }
         }
     )
