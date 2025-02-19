@@ -1,0 +1,11 @@
+#categorie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    margin: 30px;
+}
+
+#categorie button{
+    padding: 10px;
+    margin: 5px;
+}

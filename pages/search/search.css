@@ -51,7 +51,7 @@
     width: 300px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
     #search_and_button input{
         font-size: 16px;
         width: 300px;

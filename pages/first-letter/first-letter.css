@@ -7,14 +7,15 @@
 #alpha a{
     text-decoration: none;
     color: black;
-    margin: 5px;
+    padding: 10px;
+    font-size: 24px;
 }
 
 #alpha a:hover{
     text-decoration: none;
     color: black;
     background-color: pink;
-    margin: 5px;
+    padding: 10px;
 }
 
 
@@ -25,7 +26,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 
 #first-letter div{

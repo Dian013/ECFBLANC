@@ -1,26 +1,58 @@
 .fiche-plat{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.fiche-plat div{
-    width: 300px;
-    background-color: rgb(255, 213, 213);
-    padding: 15px;
+    margin-top: 30px;
 
     display: flex;
-    flex-direction: column;
+
+    justify-self: center;
     align-items: center;
+
+    flex-direction: column;
     
+
+    gap: 10px;
+
+    width:60%;
+    background-color: rgb(255, 213, 213);
+    border: 1px solid black;
+
+    font-size: 20px;
+
 }
 
 .fiche-plat img{
-    width: 200px;
-    height: auto;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
+    border-bottom: 1px solid black;
 }
 
-/* J'ai essayé de faire un css pour toute les fiches mais je m'en sort pas j'ai fini par faire 1 css par page */
-/*J'ai compris à la fin comment ça marche mais j'ai pas le temps de tout refaire*/
+.fiche-plat h2{
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#div_Ingredient_Measure{
+    display: flex;
+    gap: 30px;
+    margin: 10px 0px 20px 0px;
+}
+
+
+@media (max-width: 700px) {
+    .fiche-plat{
+        width: 90%;  
+        font-size: 18px;  
+    }
+
+    .fiche-plat h2{
+        font-size: 26px;
+    }
+    
+}
+
+
+
+
+
