@@ -7,8 +7,13 @@ fetch('../menu/menu.html')
 
         console.log(doc)
         const menu = doc.querySelector('nav')
-        const header = document.querySelector('header')
+        const bas_de_page = doc.querySelector('footer') //On cherche l'élément dans le menu
+
+        const header = document.querySelector('header') 
+        const footer = document.querySelector('footer') //On cherche l'élément correspondant dans notre html affilié à ce js
+        
         header.append(menu)
+        footer.append(bas_de_page)  //On l'ajoute à notre html
     });
 
 
@@ -20,6 +25,9 @@ input.addEventListener("keypress", function(event){
         const inputValue = input.value.trim()  //trim permet d'enlever les espaces blanc autour du string
     
         if (inputValue){
+            const logo_gretaeat = document.querySelector('#logo_gretaeat')
+            logo_gretaeat.style.display = 'none'  //Enlever le logo qui me sert juste à remplir la page et décaler le footer
+
             const word = inputValue
             search(word)
         }
@@ -33,11 +41,13 @@ input.addEventListener("keypress", function(event){
 //En appuyant sur le bouton, ça cherche ce qu'il y avait dans l'input
 const button = document.querySelector('button') 
 button.addEventListener("click",function(){
-
     let input = document.querySelector('input');
     const inputValue = input.value.trim()  //trim permet d'enlever les espaces blanc autour du string
 
     if (inputValue){
+        const logo_gretaeat = document.querySelector('#logo_gretaeat')
+        logo_gretaeat.style.display = 'none'  //Enlever le logo qui me sert juste à remplir la page et décaler le footer    
+
         const word = inputValue
         search(word)
     }

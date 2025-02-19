@@ -7,12 +7,22 @@ fetch('../menu/menu.html')
 
         console.log(doc)
         const menu = doc.querySelector('nav')
-        const header = document.querySelector('header')
+        const bas_de_page = doc.querySelector('footer') //On cherche l'élément dans le menu
+
+        const header = document.querySelector('header') 
+        const footer = document.querySelector('footer') //On cherche l'élément correspondant dans notre html affilié à ce js
+        
         header.append(menu)
+        footer.append(bas_de_page)  //On l'ajoute à notre html
     });
 
 
+
 function first_letter(letter){ 
+    
+    const logo_gretaeat = document.querySelector('#logo_gretaeat')
+    logo_gretaeat.style.display = 'none'  //Enlever le logo qui me sert juste à remplir la page et décaler le footer
+
     
     const div = document.querySelector('#first-letter')
     div.innerHTML = ""; //Reinitialiser div à chaque nouvelle recherche

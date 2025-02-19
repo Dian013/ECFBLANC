@@ -4,12 +4,25 @@
     box-sizing: border-box;
 }
 
+.berkshire-swash-regular {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 #menu_nav {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 249, 225);
     box-shadow: 0px 0px 20px rgb(207, 207, 207);
+}
+
+#menu_nav img {
+    position: absolute;
+    left: 7px;
+    width: auto;
+    height: 55px;
 }
 
 #menu_ul {
@@ -29,6 +42,7 @@
     color: black;
     text-decoration: none;   
     text-transform: uppercase; 
+    font-family: 'Berkshire Swash';
 
     &:hover{   /*SCSS permet de mettre le hover ici*/
         background-color: orange;
@@ -39,7 +53,37 @@
     color: white
 }
 
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 213, 213);
+    text-align: center;
+    align-content: center;
+    bottom: 0;
+
+    position: relative;
+    bottom: 0;
+}
+
+footer a{
+
+    text-decoration: none;
+}
+
 @media (max-width: 700px) {
+    #menu_nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu_nav img {
+        position: relative;
+        height: 70px;
+        width: 70px;
+        align-self: center;
+    }
+
     #menu_ul {
         width: 100%;   
         flex-flow: column;

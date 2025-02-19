@@ -51,6 +51,11 @@
     width: 300px;
 }
 
+#logo_gretaeat{
+    display: flex;
+    justify-self: center;
+}
+
 @media (max-width: 700px) {
     #search_and_button input{
         font-size: 16px;

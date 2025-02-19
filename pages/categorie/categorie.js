@@ -7,9 +7,15 @@ fetch('../menu/menu.html')
 
         console.log(doc)
         const menu = doc.querySelector('nav')
-        const header = document.querySelector('header')
+        const bas_de_page = doc.querySelector('footer') //On cherche l'élément dans le menu
+
+        const header = document.querySelector('header') 
+        const footer = document.querySelector('footer') //On cherche l'élément correspondant dans notre html affilié à ce js
+        
         header.append(menu)
+        footer.append(bas_de_page)  //On l'ajoute à notre html
     });
+
 
 const categorie = localStorage.getItem('mealcategorie');  //Récuperer l'id dans l'espace local placé au moment du click sur le lien
 categorie_function(categorie)
@@ -31,7 +37,13 @@ function categorie_function(categorie){
 
                 const id = meals[i].idMeal
 
-                img.src = meals[i].strMealThumb
+            try {
+                img.src = meals[i].strMealThumb;
+                } catch (error) {
+                img.src = "../../img/Logo_GretaEat.png"
+                }
+                  
+                
                 h2.textContent = meals[i].strMeal;
 
                 meal_link.textContent = "voir plus"

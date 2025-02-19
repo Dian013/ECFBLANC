@@ -53,3 +53,8 @@
 #first-letter div button{
     width: 300px;
 }
+
+#logo_gretaeat{
+    display: flex;
+    justify-self: center;
+}

@@ -7,8 +7,13 @@ fetch('../menu/menu.html')
 
         console.log(doc)
         const menu = doc.querySelector('nav')
-        const header = document.querySelector('header')
+        const bas_de_page = doc.querySelector('footer') //On cherche l'élément dans le menu
+
+        const header = document.querySelector('header') 
+        const footer = document.querySelector('footer') //On cherche l'élément correspondant dans notre html affilié à ce js
+        
         header.append(menu)
+        footer.append(bas_de_page)  //On l'ajoute à notre html
     });
 
 fetch("https://www.themealdb.com/api/json/v1/1/categories.php")

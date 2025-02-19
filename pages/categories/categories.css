@@ -9,3 +9,8 @@
     padding: 10px;
     margin: 5px;
 }
+
+#logo_gretaeat{
+    display: flex;
+    justify-self: center;
+}
