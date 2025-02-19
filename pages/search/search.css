@@ -54,6 +54,7 @@
 #logo_gretaeat{
     display: flex;
     justify-self: center;
+    width: 50%;
 }
 
 @media (max-width: 700px) {

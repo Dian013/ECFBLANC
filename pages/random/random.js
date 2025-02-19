@@ -34,8 +34,9 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
 
         div_Ingredient_Measure.id = "div_Ingredient_Measure"
 
-        img.src = meals[0].strMealThumb
         h2.textContent = meals[0].strMeal;
+        img.src = meals[0].strMealThumb;
+        img.alt = `Image de ${h2.textContent}` //Donne un alt à l'image pour l'accessibilité utilisateur
         p_area.textContent = `Area : ${meals[0].strArea}`;
         p_category.textContent = `Category : ${meals[0].strCategory}`;
         

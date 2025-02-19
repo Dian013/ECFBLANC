@@ -57,7 +57,7 @@ button.addEventListener("click",function(){
     }   
 });
 
-function search(word){
+async function search(word){
 
     const div = document.querySelector('#search');
     div.innerHTML = "";  //Reinitialiser div à chaque nouvelle recherche
@@ -79,8 +79,9 @@ function search(word){
                 
                 const id = meals[i].idMeal
 
-                img.src = meals[i].strMealThumb;
                 h2.textContent = meals[i].strMeal;
+                img.src = meals[i].strMealThumb;
+                img.alt = `Image de ${h2.textContent}` //Donne un alt à l'image pour l'accessibilité utilisateur
                 p_area_category.textContent = `Area : ${meals[i].strArea}
                                                 Category : ${meals[i].strCategory}`;
                 

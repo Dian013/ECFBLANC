@@ -18,7 +18,7 @@ fetch('../menu/menu.html')
 
 
 
-function first_letter(letter){ 
+async function first_letter(letter){ 
     
     const logo_gretaeat = document.querySelector('#logo_gretaeat')
     logo_gretaeat.style.display = 'none'  //Enlever le logo qui me sert juste à remplir la page et décaler le footer
@@ -46,10 +46,12 @@ function first_letter(letter){
                 
                 const id = meals[i].idMeal
 
-                img.src = meals[i].strMealThumb;
                 h2.textContent = meals[i].strMeal;
+                img.src = meals[i].strMealThumb;
+                img.alt = `Image de ${h2.textContent}` //Donne un alt à l'image pour l'accessibilité utilisateur
                 p_area_category.textContent = `Area : ${meals[i].strArea}
                                                 Category : ${meals[i].strCategory}`;
+                
                 
 
                 meal_link.textContent = "voir plus"
@@ -65,6 +67,7 @@ function first_letter(letter){
                 div.appendChild(meal_link)               
 
                 div_main.append(div)
+
             }
         }
     )

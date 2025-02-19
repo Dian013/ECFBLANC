@@ -57,4 +57,5 @@
 #logo_gretaeat{
     display: flex;
     justify-self: center;
+    width: 50%;
 }
