@@ -1,5 +1,13 @@
 # ECFBLANC
 
+  Vous arrivez dans votre nouvelle boîte, et pour les besoins de celle-ci, on vous demande de
+maquetter puis de coder un site permettant de pouvoir proposer des idées de repas à une
+famille sur une semaine. En somme, un "Suggestionneur de Repas", en utilisant l'API
+suivante : [ TheMealDB ] (https://www.themealdb.com).
+
+  TheMealDB est un site web exposant une API de recettes de cuisine du monde entier.
+Plusieurs webhooks permettent de consulter cette API afin de l’intégrer à nos applications.
+
 # Les fonctionnalités du Site
     - un header avec au minimum le logo de votre app
     - un footer avec au minimum votre nom et prénom
